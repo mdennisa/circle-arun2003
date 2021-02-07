@@ -1,5 +1,9 @@
 const locations = [
     {
+        name: "KomplekArun",
+        coordinate: [5.219031, 97.0467434]
+    },
+    {
         name: "BandaAceh",
         coordinate: [5.5528455, 95.3192908]
     },
@@ -66,6 +70,10 @@ const locations = [
     {
         name: "Balikpapan",
         coordinate: [-1.2398711, 116.8593379]
+    },
+    {
+        name: "Bontang",
+        coordinate: [0.1236548, 117.471708]
     },
 ]
 
