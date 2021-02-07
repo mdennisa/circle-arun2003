@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Circle ARUN2003 - Friend List</title>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <!-- UIkit CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.6.16/dist/css/uikit.min.css" />
+    <link rel="stylesheet" href="./app.css">
+
+</head>
+<body>
+
+    <div class="uk-container">
+
+        <div class="uk-padding">
+            <h2>Friend List</h2>
+            <p class="uk-text-primary">Update 20210207</p>
+            <table class="uk-table uk-table-divider" id="table-friends">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Location</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/scrollmagic@2.0.7/scrollmagic/uncompressed/ScrollMagic.min.js"></script>
+<!-- UIkit JS -->
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.6.16/dist/js/uikit.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.6.16/dist/js/uikit-icons.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6"></script>
+<script>
+    var db = {};
+</script>
+<script type="module">
+    import locations from './locations.js'
+    import friends from './friends.js'
+
+    db.locations = locations
+    db.friends = friends
+</script>
+<script>
+jQuery(function($) {
+
+        for (let friend of db.friends) {
+
+            let row = `
+                <tr>
+                    <td>${friend.name}</td>
+                    <td class="uk-text-muted">${friend.location}</td>
+                </tr>
+            `
+            $('#table-friends tbody').append(row)
+        }
+
+});
+</script>
+</body>
+</html>

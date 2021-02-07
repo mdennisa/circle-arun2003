@@ -1,0 +1,36 @@
+body {
+    /* font-family: 'Nunito', sans-serif; */
+    font-family: 'Poppins', sans-serif;
+}
+
+.fullpage {
+    width: 100vw;
+    height: 100vh;
+    max-width: 100%;
+}
+
+#header {
+    z-index: 100;
+    background-color: #d8e2dc;
+    color: #284b63;
+    font-size: 3em;
+    font-weight: 800;
+}
+
+#splash {
+    z-index: 200;
+    width: 100vw;
+    height: auto;
+    background-image: url(./images/seigaiha.png);
+    background-attachment: fixed;
+}
+#splash #map {
+    width: 90%;
+    height: 540px;
+    margin: 120px auto;
+}
+
+#search {
+    z-index: 300;
+    background-color: #fff;
+}

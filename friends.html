@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Circle ARUN2003 - Friend List</title>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <!-- UIkit CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.6.16/dist/css/uikit.min.css" />
+    <link rel="stylesheet" href="./app.css">
+
+</head>
+<body>
+
+    <div class="uk-container">
+
+        <div class="uk-padding">
+            <table class="uk-table uk-table-divider" id="table-friends">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Location</th>
+                        <th>Phone</th>
+                        <th>Link</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/scrollmagic@2.0.7/scrollmagic/uncompressed/ScrollMagic.min.js"></script>
+<!-- UIkit JS -->
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.6.16/dist/js/uikit.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.6.16/dist/js/uikit-icons.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6"></script>
+<script>
+    var db = {};
+</script>
+<script type="module">
+    import locations from './locations.js'
+    import friends from './friends.js'
+
+    db.locations = locations
+    db.friends = friends
+</script>
+<script>
+jQuery(function($) {
+
+    let loc = ''
+    let url = window.location.search
+    let url_params = new URLSearchParams(url)
+    if (url_params.has('location')) {
+        loc = url_params.get('location')
+
+        const fuse_options = {
+            includeScore: true,
+            useExtendedSearch: true,
+            minMatchCharLength: 3,
+            keys: ['location']
+        }
+        let fuse = new Fuse(db.friends, fuse_options);
+        let result = fuse.search("=" + loc)
+
+        for (let friend of result) {
+
+            let link = ''
+            if (typeof friend.item.link !== "undefined") {
+                let ig = (typeof friend.item.link.ig === "undefined") ? '' : friend.item.link.ig
+                let wa = (typeof friend.item.link.wa === "undefined") ? '' : friend.item.link.wa
+
+                let ig_link = (ig === '') ? '' : `<a href="${friend.item.link.ig}" target="_blank">instagram</a>`
+                let wa_link = (wa === '') ? '' : `<a href="${friend.item.link.wa}" target="_blank">wa</a>`
+
+                link = `
+                    <div>${ig_link}</div>
+                    <div>${wa_link}</div>
+                `
+            }
+
+            let row = `
+                <tr>
+                    <td>${friend.item.name}</td>
+                    <td class="uk-text-muted">${friend.item.location}</td>
+                    <td></td>
+                    <td><div class="uk-text-small">${link}</div></td>
+                </tr>
+            `
+            $('#table-friends tbody').append(row)
+        }
+    }
+
+});
+</script>
+</body>
+</html>

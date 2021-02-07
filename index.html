@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARUN2003</title>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
+    <!-- UIkit CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.6.16/dist/css/uikit.min.css" />
+    <link rel="stylesheet" href="./app.css">
+
+    <!-- fancybox -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+
+    <!-- Leaflet JS -- openstreemap -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+    integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+    crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+    integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+    crossorigin=""></script>
+</head>
+<body>
+
+    <div class="fullpage uk-flex uk-flex-center uk-flex-middle" id="header">
+        <div class="uk-text-center">Circle ARUN 2003</div>
+    </div>
+
+    <div class="fullpage uk-flex uk-flex-center uk-flex-middle" id="splash">
+        <div id="map"></div>
+    </div>
+
+    <div class="uk-flex uk-flex-center uk-flex-middle" id="search">
+        <div class="uk-container">
+            <div class="uk-padding">
+                <!-- <form class="uk-search uk-search-default" id="form-search">
+                    <span class="uk-search-icon-flip" uk-search-icon></span>
+                    <input class="uk-search-input" type="search" name="query" placeholder="Search...">
+                </form> -->
+                <a href="./friend-list.html" id="view-friend-list">View Friend List</a>
+            </div>
+        </div>
+    </div>
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/scrollmagic@2.0.7/scrollmagic/uncompressed/ScrollMagic.min.js"></script>
+<!-- UIkit JS -->
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.6.16/dist/js/uikit.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.6.16/dist/js/uikit-icons.min.js"></script>
+<!-- fancybox -->
+<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+<!-- fuse - for search -->
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6"></script>
+
+<script>
+    var db = {};
+</script>
+<script type="module">
+    import locations from './locations.js'
+    import friends from './friends.js'
+
+    db.locations = locations
+    db.friends = friends
+</script>
+
+<script>
+jQuery(function($) {
+
+    const fuse_options = {
+        includeScore: true,
+        useExtendedSearch: true,
+        minMatchCharLength: 3,
+        keys: ['location']
+    }
+    let fuse = new Fuse(db.friends, fuse_options);
+
+    function initMap() {
+        const map_indonesia = [-2.4833826, 117.8902853]
+        const map_komp_arun = [5.219031, 97.0467434]
+        var map = L.map('map', {
+            center: map_indonesia,
+            zoom: 4
+        })
+        L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+
+        for (let loc of db.locations) {
+            let marker = L.marker(loc.coordinate).addTo(map)
+            let popup = L.popup()
+            marker.on('click', function(e) {
+                let result = fuse.search("=" + loc.name)
+                popup
+                    .setLatLng(loc.coordinate)
+                    .setContent(`
+                        <p>
+                            <strong>${loc.name}</strong>
+                            <br>
+                            Ada ${result.length} teman yang bisa dihubungi
+                        <p>
+                        <p>
+                            <a href="./friends.html?location=${loc.name}" class="view-list">View List</a>
+                        </p>
+                    `)
+                    .openOn(map)
+            })
+
+        }
+
+        // MARKER view-list onclick
+        $('#map').on('click', '.view-list', function(e) {
+            e.preventDefault()
+            let url = $(this).attr('href')
+            // open iframe via fancybox
+            $.fancybox.open({
+                src: url,
+                type: 'iframe',
+                iframe: {
+                    preload: false
+                }
+            })
+        });
+
+    }
+    initMap()
+
+    // VIEW friend-list
+    $('#view-friend-list').on('click', function(e) {
+        e.preventDefault()
+        let url = $(this).attr('href')
+        // open iframe via fancybox
+        $.fancybox.open({
+            src: url,
+            type: 'iframe',
+            iframe: {
+                preload: false
+            }
+        })
+    });
+
+    // SEARCH function
+    // const fuse_options = {
+    //     includeScore: true,
+    //     useExtendedSearch: true,
+    //     minMatchCharLength: 3,
+    //     keys: ['name', 'location']
+    // }
+
+    $('#form-search').on('submit', function(e) {
+        e.preventDefault()
+    //     let formdata = $(this).serializeArray()
+    //     let query = formdata[0].value
+    //     let fuse = new Fuse(db.friends, fuse_options);
+    //     let result = fuse.search("'" + query)
+    //     console.log(fuse, result)
+    })
+
+});
+</script>
+<script src="./app.js"></script>
+</body>
+</html>
