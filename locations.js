@@ -112,10 +112,6 @@ const locations = [
         coordinate: [-6.136197, 106.90069022428446]
     },
     {
-        name: "JakartaPusat",
-        coordinate: [-6.18233995, 106.84287153600738]
-    },
-    {
         name: "JakartaBarat",
         coordinate: [-6.16156235, 106.74389124027667]
     },
