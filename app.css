@@ -34,3 +34,46 @@ body {
     z-index: 300;
     background-color: #fff;
 }
+
+#modal-container {
+    width: 100vw;
+    height: 100vh;
+    background-color: #d8e2dc;
+}
+
+#profile-container {
+    width: 480px;
+    background-color: #fff;
+}
+.profile-name {
+    font-size: 2em;
+    color: #284b63;
+}
+.profile-avatar {
+    width: 128px;
+    height: 128px;
+}
+.profile-avatar img {
+    width: 128px;
+    height: 128px;
+    display: inline-block;
+    margin: 0 auto;
+}
+.profile-link {
+    font-size: 32px;
+}
+.profile-link a {
+    display: inline-block;
+}
+.link-fb, .link-fb:hover {
+    color: #3b5998;
+}
+.link-ig, .link-ig:hover {
+    color: #cd486b;
+}
+.link-linkedin, .link-linkedin:hover {
+    color: #2867B2;
+}
+.link-wa, .link-wa:hover {
+    color: #25d366;
+}

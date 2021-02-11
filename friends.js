@@ -1,836 +1,2013 @@
-const friends =
-[
-    {
-      "name": "ABU ZABEDAN",
-      "gender": "L",
-      "location": "YOGYAKARTA"
-    },
-    {
-      "name": "ACHMAD YANI",
-      "gender": "L",
-      "location": "PEKANBARU"
-    },
-    {
-      "name": "ADE IRWANSYAH",
-      "gender": "L",
-      "location": "MEDAN"
-    },
-    {
-      "name": "AFRIZAL ",
-      "gender": "L",
-      "location": "BANDUNG"
-    },
-    {
-      "name": "AGUS SYAHRIZAL ",
-      "gender": "L",
-      "location": "JAKARTA"
-    },
-    {
-      "name": "AI SYAMSUDDIN",
-      "gender": "L",
-      "location": ""
-    },
-    {
-      "name": "AINIMAR",
-      "gender": "P",
-      "location": ""
-    },
-    {
-      "name": "AL FATAH ",
-      "gender": "L",
-      "location": "MEDAN"
-    },
-    {
-      "name": "ALAN",
-      "gender": "L",
-      "location": "YOGYAKARTA"
-    },
-    {
-      "name": "ALI ",
-      "gender": "L",
-      "location": ""
-    },
-    {
-      "name": "ALKHALIDI DOSTI",
-      "gender": "L",
-      "location": "LHOKSEUMAWE"
-    },
-    {
-      "name": "AMALIA HUSEIN",
-      "gender": "P",
-      "location": "SINGAPORE"
-    },
-    {
-      "name": "AMIRUL ARDI",
-      "gender": "L",
-      "location": ""
-    },
-    {
-      "name": "AMRON",
-      "gender": "L",
-      "location": ""
-    },
-    {
-      "name": "ANDALIVIA",
-      "gender": "P",
-      "location": ""
-    },
-    {
-      "name": "ANDALUCIA",
-      "gender": "P",
-      "location": "DEPOK"
-    },
-    {
-      "name": "ANDHYA ",
-      "gender": "L",
-      "location": ""
-    },
-    {
-      "name": "ANDI IRAWAN",
-      "gender": "L",
-      "location": ""
-    },
-    {
-      "name": "ANDIKA ",
-      "gender": "L",
-      "location": ""
-    },
-    {
-      "name": "ANITA ",
-      "gender": "P",
-      "location": ""
-    },
-    {
-      "name": "ANNISA HARTICA",
-      "gender": "P",
-      "location": ""
-    },
-    {
-      "name": "ARIE WILYANA",
-      "gender": "P",
-      "location": ""
-    },
-    {
-      "name": "ARIECI MAULANA ",
-      "gender": "L",
-      "location": "JAKARTA"
-    },
-    {
-      "name": "ARIS",
-      "gender": "L",
-      "location": "LHOKSEUMAWE"
-    },
-    {
-      "name": "ARIS MUNANDAR",
-      "gender": "L",
-      "location": "JAKARTA"
-    },
-    {
-      "name": "ARRY LUANDA",
-      "gender": "L",
-      "location": ""
-    },
-    {
-      "name": "ARYA FADHILA",
-      "gender": "L",
-      "location": "BANDUNG"
-    },
-    {
-      "name": "ASRADI NUR",
-      "gender": "L",
-      "location": ""
-    },
-    {
-      "name": "ASTRID ADELINA ",
-      "gender": "P",
-      "location": "CIREBON"
-    },
-    {
-      "name": "AULIA HUMAN",
-      "gender": "L",
-      "location": "JAKARTA"
-    },
-    {
-      "name": "AVICIENA BASYA",
-      "gender": "L",
-      "location": "JAKARTA"
-    },
-    {
-      "name": "CAROLUS CARLO OLABOLI",
-      "gender": "L",
-      "location": "BEKASI"
-    },
-    {
-      "name": "CERIA KEUMALASARI",
-      "gender": "P",
-      "location": "JAKARTA"
-    },
-    {
-      "name": "CHANDRA",
-      "gender": "L",
-      "location": ""
-    },
-    {
-      "name": "CUT NIA RAMADHANI",
-      "gender": "P",
-      "location": "BEKASI"
-    },
-    {
-      "name": "CUT ROZY RISKIANY",
-      "gender": "P",
-      "location": "KUALA SIMPANG"
-    },
-    {
-      "name": "CUT SYAFRINA",
-      "gender": "P",
-      "location": "LHOKSEUMAWE"
-    },
-    {
-      "name": "DANA ",
-      "gender": "L",
-      "location": ""
-    },
-    {
-      "name": "DANI FAUZI",
-      "gender": "L",
-      "location": "KUALALUMPUR"
-    },
-    {
-      "name": "DANU HERMANU",
-      "gender": "L",
-      "location": "CIKARANG"
-    },
-    {
-      "name": "DARA MALAHAYATI",
-      "gender": "P ",
-      "location": "LHOKSEUMAWE"
-    },
-    {
-      "name": "DARU ",
-      "gender": "L",
-      "location": ""
-    },
-    {
-      "name": "DEBBYWANTI",
-      "gender": "P",
-      "location": "MEDAN"
-    },
-    {
-      "name": "DEDY RAYAN",
-      "gender": "L",
-      "location": ""
-    },
-    {
-      "name": "DENNIS",
-      "gender": "L",
-      "location": "KUALALUMPUR",
-      "link": {
-        "wa": "https://wa.me/+6285761807229",
-        "ig": "https://www.instagram.com/mdennisa/"
-      }
-    },
-    {
-      "name": "DESI MAULIDA",
-      "gender": "P",
-      "location": ""
-    },
-    {
-      "name": "DEWI RIZKI AMELIA",
-      "gender": "P",
-      "location": ""
-    },
-    {
-      "name": "DEWI SARTIKA ",
-      "gender": "P",
-      "location": ""
-    },
-    {
-      "name": "DINA TIFFANI",
-      "gender": "P",
-      "location": "MEDAN"
-    },
-    {
-      "name": "DINO",
-      "gender": "L",
-      "location": "MEDAN"
-    },
-    {
-      "name": "DIRA YUANA PUTRI",
-      "gender": "P",
-      "location": "BIREUEN"
-    },
-    {
-      "name": "DITA FERINA ",
-      "gender": "P",
-      "location": ""
-    },
-    {
-      "name": "DODY ROBINSON ",
-      "gender": "L",
-      "location": "JAKARTA"
-    },
-    {
-      "name": "DONI PRABUDI",
-      "gender": "L",
-      "location": "LHOKSEUMAWE"
-    },
-    {
-      "name": "DWI ADDINWIBOWO",
-      "gender": "L",
-      "location": "JAKARTA"
-    },
-    {
-      "name": "EDDY TRISNAWAN",
-      "gender": "L",
-      "location": "KUALALUMPUR"
-    },
-    {
-      "name": "EMILIA GUSTIKA ",
-      "gender": "P",
-      "location": "JAKARTA"
-    },
-    {
-      "name": "ERRY RUSTIANSYAH",
-      "gender": "L",
-      "location": ""
-    },
-    {
-      "name": "ERWAN MAULANA",
-      "gender": "L",
-      "location": "JAKARTA"
-    },
-    {
-      "name": "FADJARUDDIN NUR",
-      "gender": "L",
-      "location": "BANDUNG"
-    },
-    {
-      "name": "FADLI HARIADI ",
-      "gender": "L",
-      "location": "BANDUNG"
-    },
-    {
-      "name": "FAISAL HARRY ",
-      "gender": "L",
-      "location": "LHOKSEUMAWE"
-    },
-    {
-      "name": "FAJAR HIDAYAT",
-      "gender": "L",
-      "location": "MEDAN"
-    },
-    {
-      "name": "FAKHRI ANINDITA",
-      "gender": "L",
-      "location": "JAKARTA"
-    },
-    {
-      "name": "FARID MEISA",
-      "gender": "L",
-      "location": "YOGYAKARTA"
-    },
-    {
-      "name": "FERRY ",
-      "gender": "L",
-      "location": "BOGOR"
-    },
-    {
-      "name": "FRANS MARIO ",
-      "gender": "L",
-      "location": ""
-    },
-    {
-      "name": "FURY MAULINA",
-      "gender": "P",
-      "location": "AMSTERDAM"
-    },
-    {
-      "name": "GIATRAMORA",
-      "gender": "L",
-      "location": ""
-    },
-    {
-      "name": "GINANJAR KUSUMA ",
-      "gender": "L",
-      "location": "BANDUNG"
-    },
-    {
-      "name": "GRIYA RIDHA RAHARJA",
-      "gender": "L",
-      "location": "JAKARTA"
-    },
-    {
-      "name": "HADY MUZAKKIR",
-      "gender": "L",
-      "location": ""
-    },
-    {
-      "name": "HANDI HASUAR",
-      "gender": "L",
-      "location": "SINGAPORE"
-    },
-    {
-      "name": "HARRY KURNIAWAN",
-      "gender": "L",
-      "location": "MEDAN"
-    },
-    {
-      "name": "HENDRA NOVAL ",
-      "gender": "L",
-      "location": "BIREUEN"
-    },
-    {
-      "name": "HENDRA WIDYANTO",
-      "gender": "L",
-      "location": "JAKARTA"
-    },
-    {
-      "name": "HUSNA INDRIANI ",
-      "gender": "P",
-      "location": "BANDUNG"
-    },
-    {
-      "name": "IAN FAHMI",
-      "gender": "L",
-      "location": "BANDAACEH"
+const friends = [
+    {
+      "name": "Muhammad Dennisa",
+      "location": "KualaLumpur",
+      "school_sd": "SD 1",
+      "school_smp": "SMP 2",
+      "school_sma": "SMA 1 Medan",
+      "job": "Solution Architect, Product Manager",
+      "link_wa": "https://wa.me/+6285761807229",
+      "link_fb": "https://www.facebook.com/mdennisa",
+      "link_ig": "https://www.instagram.com/mdennisa/",
+      "link_twitter": "",
+      "link_linkedin": "https://www.linkedin.com/in/mdennisa/",
+      "img": "./images/profiles/mdennisa.jpg",
+      "summary": "Menyediakan jasa konsultasi IT, digital startup, web development, UX dan design"
+    },
+    {
+      "name": "Muhammad Fifin Kombih",
+      "location": "Surabaya",
+      "school_sd": "SD 1",
+      "school_smp": "SMP 1",
+      "school_sma": "",
+      "job": "Dokter",
+      "link_wa": "",
+      "link_fb": "",
+      "link_ig": "",
+      "link_twitter": "",
+      "link_linkedin": "",
+      "img": "",
+      "summary": ""
+    },
+    {
+      "name": "EMILIA GUSTIKA HADI",
+      "location": "Jakarta",
+      "school_sd": "SD 3",
+      "school_smp": "SMP 2",
+      "school_sma": "",
+      "job": "Dentist",
+      "link_wa": "",
+      "link_fb": "",
+      "link_ig": "",
+      "link_twitter": "",
+      "link_linkedin": "",
+      "img": "",
+      "summary": ""
+    },
+    {
+      "name": "Reny amalia anastasya ",
+      "location": "Pekanbaru ",
+      "school_sd": "",
+      "school_smp": "SMP 2",
+      "school_sma": "",
+      "job": "",
+      "link_wa": "",
+      "link_fb": "",
+      "link_ig": "",
+      "link_twitter": "",
+      "link_linkedin": "",
+      "img": "",
+      "summary": ""
+    },
+    {
+      "name": "Muhammad ichsan",
+      "location": "Bireuen",
+      "school_sd": "SD 1",
+      "school_smp": "SMP 1",
+      "school_sma": "",
+      "job": "Kementerian agama ",
+      "link_wa": "",
+      "link_fb": "",
+      "link_ig": "",
+      "link_twitter": "",
+      "link_linkedin": "",
+      "img": "",
+      "summary": ""
+    },
+    {
+      "name": "Immanuel Christian Sinaga",
+      "location": "Medan",
+      "school_sd": "SD 1",
+      "school_smp": "SMP 1",
+      "school_sma": "",
+      "job": "Freelance",
+      "link_wa": "",
+      "link_fb": "",
+      "link_ig": "",
+      "link_twitter": "",
+      "link_linkedin": "",
+      "img": "",
+      "summary": ""
+    },
+    {
+      "name": "Lena Romawana",
+      "location": "BandaAceh",
+      "school_sd": "",
+      "school_smp": "",
+      "school_sma": "",
+      "job": "PT HM SAMPOERNA TBK",
+      "link_wa": "",
+      "link_fb": "",
+      "link_ig": "",
+      "link_twitter": "",
+      "link_linkedin": "",
+      "img": "",
+      "summary": ""
+    },
+    {
+      "name": "Muhammad al fatah",
+      "location": "Medan",
+      "school_sd": "",
+      "school_smp": "SMP 2",
+      "school_sma": "",
+      "job": "Wirausaha",
+      "link_wa": "",
+      "link_fb": "",
+      "link_ig": "",
+      "link_twitter": "",
+      "link_linkedin": "",
+      "img": "",
+      "summary": ""
+    },
+    {
+      "name": "Danu Hermanu",
+      "location": "CikarangBarat",
+      "school_sd": "SD 4",
+      "school_smp": "SMP 1",
+      "school_sma": "SMK PANCA BUDI, Medan",
+      "job": "PT. HM. Sampoerna. Tbk",
+      "link_wa": "",
+      "link_fb": "",
+      "link_ig": "",
+      "link_twitter": "",
+      "link_linkedin": "",
+      "img": "",
+      "summary": ""
+    },
+    {
+      "name": "Cut Rozy Rizkiany",
+      "location": "KualaSimpang",
+      "school_sd": "SD 2",
+      "school_smp": "SMP 2",
+      "school_sma": "SMA YAPENA",
+      "job": "Bidan",
+      "link_wa": "",
+      "link_fb": "",
+      "link_ig": "",
+      "link_twitter": "",
+      "link_linkedin": "",
+      "img": "",
+      "summary": ""
+    },
+    {
+      "name": "Ruranha",
+      "location": "Tangerang",
+      "school_sd": "SD 1",
+      "school_smp": "SMP 1",
+      "school_sma": "SMU PLUS AL-AZHAR MEDAN",
+      "job": "Senior Consultant Offshore and Maritime",
+      "link_wa": "",
+      "link_fb": "",
+      "link_ig": "",
+      "link_twitter": "",
+      "link_linkedin": "",
+      "img": "",
+      "summary": ""
+    },
+    {
+      "name": "Yusran Bani",
+      "location": "Lhokseumawe",
+      "school_sd": "SD 3",
+      "school_smp": "SMP 2",
+      "school_sma": "SMA YAPENA",
+      "job": "Staff IT UPT TIK Universitas Malikussaleh",
+      "link_wa": "",
+      "link_fb": "",
+      "link_ig": "",
+      "link_twitter": "",
+      "link_linkedin": "",
+      "img": "",
+      "summary": ""
+    },
+    {
+      "name": "Reza Mahnur",
+      "location": "Lhokseumawe",
+      "school_sd": "SD 3",
+      "school_smp": "SMP 2",
+      "school_sma": "SMA YAPENA",
+      "job": "PNS",
+      "link_wa": "",
+      "link_fb": "",
+      "link_ig": "",
+      "link_twitter": "",
+      "link_linkedin": "",
+      "img": "",
+      "summary": ""
+    },
+    {
+      "name": "ratna ningsih",
+      "location": "Meulaboh",
+      "school_sd": "SD 2",
+      "school_smp": "SMP 2",
+      "school_sma": "SMA YAPENA",
+      "job": "jualan motor",
+      "link_wa": "",
+      "link_fb": "",
+      "link_ig": "",
+      "link_twitter": "",
+      "link_linkedin": "",
+      "img": "",
+      "summary": ""
+    },
+    {
+      "name": "Lona Gultom",
+      "location": "JakartaTimur",
+      "school_sd": "SD 1",
+      "school_smp": "SMP 1",
+      "school_sma": "SMA YAPENA",
+      "job": "Advokat, Jasa Hukum",
+      "link_wa": "",
+      "link_fb": "",
+      "link_ig": "",
+      "link_twitter": "",
+      "link_linkedin": "",
+      "img": "",
+      "summary": ""
+    },
+    {
+      "name": "Nasrullah (Tino)",
+      "location": "JakartaTimur",
+      "school_sd": "SD 4",
+      "school_smp": "SMP 1",
+      "school_sma": "SMUN 1 Medan",
+      "job": "PT. Jasa Marga (Persero) Tbk.",
+      "link_wa": "",
+      "link_fb": "",
+      "link_ig": "",
+      "link_twitter": "",
+      "link_linkedin": "",
+      "img": "",
+      "summary": ""
+    },
+    {
+      "name": "Arismunandar",
+      "location": "TangerangSelatan",
+      "school_sd": "SD 1",
+      "school_smp": "SMP 1",
+      "school_sma": "SMA Krida Nusantara, bandung",
+      "job": "Profesional ",
+      "link_wa": "",
+      "link_fb": "",
+      "link_ig": "",
+      "link_twitter": "",
+      "link_linkedin": "",
+      "img": "",
+      "summary": ""
+    },
+    {
+      "name": "Ulli Agusti",
+      "location": "Lhokseumawe",
+      "school_sd": "SD 3",
+      "school_smp": "SMP 2",
+      "school_sma": "SMA YAPENA",
+      "job": "",
+      "link_wa": "",
+      "link_fb": "",
+      "link_ig": "",
+      "link_twitter": "",
+      "link_linkedin": "",
+      "img": "",
+      "summary": ""
+    },
+    {
+      "name": "Muhammad Ivan Fikriadi",
+      "location": "Bandung",
+      "school_sd": "SD 4",
+      "school_smp": "SMP 2",
+      "school_sma": "SMA YAPENA",
+      "job": "Pegawai Swasta di PT. Hariff Daya Tunggal Engineering bidang Rectifier & Baterai Telekomunikasi.",
+      "link_wa": "",
+      "link_fb": "",
+      "link_ig": "",
+      "link_twitter": "",
+      "link_linkedin": "",
+      "img": "",
+      "summary": "Usaha sampingan jadi coach diet online"
+    },
+    {
+      "name": "Muhammad Afrizal",
+      "location": "Bandung ",
+      "school_sd": "SD 4",
+      "school_smp": "SMP 2",
+      "school_sma": "Kartika 1-2 medan",
+      "job": "ASN",
+      "link_wa": "",
+      "link_fb": "",
+      "link_ig": "",
+      "link_twitter": "",
+      "link_linkedin": "",
+      "img": "",
+      "summary": ""
+    },
+    {
+      "name": "Rully",
+      "location": "BandaAceh",
+      "school_sd": "SD 2",
+      "school_smp": "SMP 2",
+      "school_sma": "SMA YAPENA",
+      "job": "PNS",
+      "link_wa": "",
+      "link_fb": "",
+      "link_ig": "",
+      "link_twitter": "",
+      "link_linkedin": "",
+      "img": "",
+      "summary": ""
+    },
+    {
+      "name": "Yessy Arina",
+      "location": "Medan",
+      "school_sd": "SD 2",
+      "school_smp": "SMP 1",
+      "school_sma": "SMA YAPENA",
+      "job": "PNS KLHK",
+      "link_wa": "",
+      "link_fb": "",
+      "link_ig": "",
+      "link_twitter": "",
+      "link_linkedin": "",
+      "img": "",
+      "summary": ""
+    },
+    {
+      "name": "Arieci Maulana",
+      "location": "JakartaTimur",
+      "school_sd": "SD 2",
+      "school_smp": "SMP 1",
+      "school_sma": "SMA YAPENA",
+      "job": "",
+      "link_wa": "",
+      "link_fb": "",
+      "link_ig": "",
+      "link_twitter": "",
+      "link_linkedin": "",
+      "img": "",
+      "summary": ""
+    },
+    {
+      "name": "Tri Setyadi",
+      "location": "SulawesiTengah",
+      "school_sd": "SD 3",
+      "school_smp": "SMP 2",
+      "school_sma": "Yogyakarta",
+      "job": "Environtmental Consulting",
+      "link_wa": "",
+      "link_fb": "",
+      "link_ig": "",
+      "link_twitter": "",
+      "link_linkedin": "",
+      "img": "",
+      "summary": ""
+    },
+    {
+      "name": "Robby Ilham",
+      "location": "Makassar",
+      "school_sd": "SD 1",
+      "school_smp": "SMP 1",
+      "school_sma": "SMU ADABIAH Padang",
+      "job": "Airnav Indonesia",
+      "link_wa": "",
+      "link_fb": "",
+      "link_ig": "",
+      "link_twitter": "",
+      "link_linkedin": "",
+      "img": "",
+      "summary": ""
+    },
+    {
+      "name": "Muhammad Rizki Rinaldi",
+      "location": "TangerangSelatan",
+      "school_sd": "SD 2",
+      "school_smp": "SMP 1",
+      "school_sma": "SMA Medan",
+      "job": "Konstruksi",
+      "link_wa": "",
+      "link_fb": "",
+      "link_ig": "",
+      "link_twitter": "",
+      "link_linkedin": "",
+      "img": "",
+      "summary": ""
+    },
+    {
+      "name": "Reny amalia ",
+      "location": "Pekanbaru ",
+      "school_sd": "SD 3",
+      "school_smp": "SMP 2",
+      "school_sma": "",
+      "job": "",
+      "link_wa": "",
+      "link_fb": "",
+      "link_ig": "",
+      "link_twitter": "",
+      "link_linkedin": "",
+      "img": "",
+      "summary": ""
+    },
+    {
+      "name": "Siska Ananda (Ciko) ",
+      "location": "BlangPidie",
+      "school_sd": "SD 1",
+      "school_smp": "SMP 1",
+      "school_sma": "SMA YAPENA",
+      "job": "Dokter",
+      "link_wa": "",
+      "link_fb": "",
+      "link_ig": "",
+      "link_twitter": "",
+      "link_linkedin": "",
+      "img": "",
+      "summary": ""
+    },
+    {
+      "name": "MIRZA MOSADDEQ SHAH",
+      "location": "TanjungPinang",
+      "school_sd": "SD 2",
+      "school_smp": "SMP 2",
+      "school_sma": "SMA YAPENA",
+      "job": "PERUMDA AIR MINUM TIRTA KEPRI sebagai HRD",
+      "link_wa": "",
+      "link_fb": "",
+      "link_ig": "",
+      "link_twitter": "",
+      "link_linkedin": "",
+      "img": "",
+      "summary": ""
+    },
+    {
+      "name": "Hendra Noval",
+      "location": "Bireuen",
+      "school_sd": "SD 1",
+      "school_smp": "SMP 2",
+      "school_sma": "SMA YAPENA",
+      "job": "POLRI",
+      "link_wa": "",
+      "link_fb": "",
+      "link_ig": "",
+      "link_twitter": "",
+      "link_linkedin": "",
+      "img": "",
+      "summary": ""
+    },
+    {
+      "name": "Astrid Adelinna",
+      "location": "Cirebon",
+      "school_sd": "SD 1",
+      "school_smp": "SMP 1",
+      "school_sma": "SMU Negeri 1 Cirebon",
+      "job": "Mompreneur HDI",
+      "link_wa": "",
+      "link_fb": "",
+      "link_ig": "",
+      "link_twitter": "",
+      "link_linkedin": "",
+      "img": "",
+      "summary": ""
+    },
+    {
+      "name": "Dina Tiffany",
+      "location": "Medan",
+      "school_sd": "SD 3",
+      "school_smp": "SMP 2",
+      "school_sma": "SMA YAPENA",
+      "job": "Wirausaha",
+      "link_wa": "",
+      "link_fb": "",
+      "link_ig": "",
+      "link_twitter": "",
+      "link_linkedin": "",
+      "img": "",
+      "summary": ""
+    },
+    {
+      "name": "Fadlan Syafriza",
+      "location": "Yogyakarta",
+      "school_sd": "SD 1",
+      "school_smp": "SMP 1",
+      "school_sma": "",
+      "job": "",
+      "link_wa": "",
+      "link_fb": "",
+      "link_ig": "",
+      "link_twitter": "",
+      "link_linkedin": "",
+      "img": "",
+      "summary": ""
+    },
+    {
+      "name": "Criya Keumalasari",
+      "location": "Jakarta",
+      "school_sd": "SD 1",
+      "school_smp": "SMP 1",
+      "school_sma": "Bandung",
+      "job": "",
+      "link_wa": "",
+      "link_fb": "",
+      "link_ig": "",
+      "link_twitter": "",
+      "link_linkedin": "",
+      "img": "",
+      "summary": ""
+    },
+    {
+      "name": "Fadli Hariadi ",
+      "location": "Bandung ",
+      "school_sd": "SD 2",
+      "school_smp": "SMPN 3 Banda Aceh ",
+      "school_sma": "SMA YAPENA",
+      "job": "Dosen PTS",
+      "link_wa": "",
+      "link_fb": "",
+      "link_ig": "",
+      "link_twitter": "",
+      "link_linkedin": "",
+      "img": "",
+      "summary": ""
+    },
+    {
+      "name": "Fadjaruddin Nur",
+      "location": "Bandung",
+      "school_sd": "SD 2",
+      "school_smp": "SMP 2",
+      "school_sma": "SMA YAPENA",
+      "job": "www.tamitaartha.co.id",
+      "link_wa": "",
+      "link_fb": "",
+      "link_ig": "",
+      "link_twitter": "",
+      "link_linkedin": "",
+      "img": "",
+      "summary": ""
+    },
+    {
+      "name": "Nita pahlevi",
+      "location": "KENDAL",
+      "school_sd": "PT pupuk iskandar muda",
+      "school_smp": "PT Pupuk iskandsr muda",
+      "school_sma": "SMA YAPENA",
+      "job": "Ibu rumah tangga",
+      "link_wa": "",
+      "link_fb": "",
+      "link_ig": "",
+      "link_twitter": "",
+      "link_linkedin": "",
+      "img": "",
+      "summary": ""
+    },
+    {
+      "name": "Ian Fahmi",
+      "location": "BandaAceh",
+      "school_sd": "SD 1",
+      "school_smp": "Medan",
+      "school_sma": "SMA YAPENA",
+      "job": "Perbankan Syariah",
+      "link_wa": "",
+      "link_fb": "",
+      "link_ig": "",
+      "link_twitter": "",
+      "link_linkedin": "",
+      "img": "",
+      "summary": ""
+    },
+    {
+      "name": "Johan triputra",
+      "location": "Bekasi",
+      "school_sd": "SD 4",
+      "school_smp": "SMP 1",
+      "school_sma": "Smun 12 medan",
+      "job": "",
+      "link_wa": "",
+      "link_fb": "",
+      "link_ig": "",
+      "link_twitter": "",
+      "link_linkedin": "",
+      "img": "",
+      "summary": ""
+    },
+    {
+      "name": "LENA ROMAWANA",
+      "location": "BANDAACEH",
+      "school_sd": "SD 1",
+      "school_smp": "SMP 1",
+      "school_sma": "KELAS 1 DI SMA YAPENA, KELAS 2-3 PINDAH KE JOGJA",
+      "job": "PT HM SAMPOERNA TBK",
+      "link_wa": "",
+      "link_fb": "",
+      "link_ig": "",
+      "link_twitter": "",
+      "link_linkedin": "",
+      "img": "",
+      "summary": ""
+    },
+    {
+      "name": "Dira Yuwana Putri",
+      "location": "Bireuen",
+      "school_sd": "SD 3",
+      "school_smp": "SMP 1",
+      "school_sma": "SMA YAPENA",
+      "job": "",
+      "link_wa": "",
+      "link_fb": "",
+      "link_ig": "",
+      "link_twitter": "",
+      "link_linkedin": "",
+      "img": "",
+      "summary": ""
+    },
+    {
+      "name": "Muhammad Reza ",
+      "location": "Kuningan",
+      "school_sd": "SD 1",
+      "school_smp": "SMP 1",
+      "school_sma": "SMA YAPENA",
+      "job": "Dokter spesialis urologi ",
+      "link_wa": "",
+      "link_fb": "",
+      "link_ig": "",
+      "link_twitter": "",
+      "link_linkedin": "",
+      "img": "",
+      "summary": ""
+    },
+    {
+      "name": "Husna Indriyani",
+      "location": "Bandung",
+      "school_sd": "SD 1",
+      "school_smp": "SMP 2",
+      "school_sma": "SMA YAPENA",
+      "job": "",
+      "link_wa": "",
+      "link_fb": "",
+      "link_ig": "",
+      "link_twitter": "",
+      "link_linkedin": "",
+      "img": "",
+      "summary": ""
+    },
+    {
+      "name": "Rafiqoh Purnamasari",
+      "location": "Medan",
+      "school_sd": "SD 2",
+      "school_smp": "SMP 2",
+      "school_sma": "SMA YAPENA",
+      "job": "Rumah Blepots",
+      "link_wa": "",
+      "link_fb": "",
+      "link_ig": "",
+      "link_twitter": "",
+      "link_linkedin": "",
+      "img": "",
+      "summary": ""
+    },
+    {
+      "name": "IRSYAD RAZAQI",
+      "location": "BONTANG",
+      "school_sd": "SD 4",
+      "school_smp": "SMP 1",
+      "school_sma": "Udah Pindah ke SMA46 Jakarta",
+      "job": "Karyawan Swasta - Tukang Insinyur",
+      "link_wa": "",
+      "link_fb": "",
+      "link_ig": "",
+      "link_twitter": "",
+      "link_linkedin": "",
+      "img": "",
+      "summary": ""
+    },
+    {
+      "name": "M. Yasin Arifin",
+      "location": "LubukPakam",
+      "school_sd": "SD 3",
+      "school_smp": "SMP 2",
+      "school_sma": "SMU Negeri 4 Tebing Tinggi",
+      "job": "Polri",
+      "link_wa": "",
+      "link_fb": "",
+      "link_ig": "",
+      "link_twitter": "",
+      "link_linkedin": "",
+      "img": "",
+      "summary": ""
+    },
+    {
+      "name": "Najmul Ikhwan",
+      "location": "Bandung",
+      "school_sd": "SD 1",
+      "school_smp": "SMP 1",
+      "school_sma": "SMA YAPENA",
+      "job": "Grab Driver ",
+      "link_wa": "https://wa.me/+628562220373",
+      "link_fb": "",
+      "link_ig": "https://www.instagram.com/ikhwan_najmul/",
+      "link_twitter": "",
+      "link_linkedin": "",
+      "img": "./images/profiles/najmul.jpg",
+      "summary": ""
+    },
+    {
+      "name": "Amalia Husein ",
+      "location": "Singapore",
+      "school_sd": "SD 4",
+      "school_smp": "SMP 1",
+      "school_sma": "Tangerang",
+      "job": "Project Engineer di JGC Singapore, oil and gas contractors ",
+      "link_wa": "",
+      "link_fb": "",
+      "link_ig": "",
+      "link_twitter": "",
+      "link_linkedin": "",
+      "img": "",
+      "summary": ""
+    },
+    {
+      "name": "Nurul Azharini",
+      "location": "Lhokseumawe",
+      "school_sd": "SD 1",
+      "school_smp": "SMP 1",
+      "school_sma": "SMA YAPENA",
+      "job": "PNS dan Jual Alat2 Home Decor",
+      "link_wa": "",
+      "link_fb": "",
+      "link_ig": "",
+      "link_twitter": "",
+      "link_linkedin": "",
+      "img": "",
+      "summary": ""
+    },
+    {
+      "name": "Slamet Hadi",
+      "location": "Yogyakarta",
+      "school_sd": "SD 1",
+      "school_smp": "SMP 1",
+      "school_sma": "SMA YAPENA",
+      "job": "",
+      "link_wa": "",
+      "link_fb": "",
+      "link_ig": "",
+      "link_twitter": "",
+      "link_linkedin": "",
+      "img": "",
+      "summary": ""
+    },
+    {
+      "name": "T. Mirzal Safari",
+      "location": "BandaAceh",
+      "school_sd": "SD 3",
+      "school_smp": "SMP 2",
+      "school_sma": "SMA YAPENA",
+      "job": "Mahasiswa",
+      "link_wa": "",
+      "link_fb": "",
+      "link_ig": "",
+      "link_twitter": "",
+      "link_linkedin": "",
+      "img": "",
+      "summary": ""
+    },
+    {
+      "name": "Zulfikar. S",
+      "location": "Lhokseumawe",
+      "school_sd": "SD 1",
+      "school_smp": "SMP 1",
+      "school_sma": "SMA YAPENA",
+      "job": "POLRI",
+      "link_wa": "",
+      "link_fb": "",
+      "link_ig": "",
+      "link_twitter": "",
+      "link_linkedin": "",
+      "img": "",
+      "summary": ""
+    },
+    {
+      "name": "Farnia Ramadhani",
+      "location": "JakartaSelatan",
+      "school_sd": "SD PIM",
+      "school_smp": "SMP PIM",
+      "school_sma": "SMA YAPENA",
+      "job": "Usaha Kedai Kopi KOMA KOPI MANGAT ",
+      "link_wa": "",
+      "link_fb": "",
+      "link_ig": "",
+      "link_twitter": "",
+      "link_linkedin": "",
+      "img": "",
+      "summary": ""
+    },
+    {
+      "name": "Khairunnisa",
+      "location": "BandarLampung",
+      "school_sd": "SD 1",
+      "school_smp": "SMP 1",
+      "school_sma": "SMA N 5 Palembang",
+      "job": "",
+      "link_wa": "",
+      "link_fb": "",
+      "link_ig": "",
+      "link_twitter": "",
+      "link_linkedin": "",
+      "img": "",
+      "summary": ""
+    },
+    {
+      "name": "Dody Robinson Lubis",
+      "location": "JakartaUtara",
+      "school_sd": "SD 1",
+      "school_smp": "SMP 1",
+      "school_sma": "SMUN 4 Medan",
+      "job": "Koordinator Media di Yayaysan Dokter Peduli ( doctorSHARE )",
+      "link_wa": "",
+      "link_fb": "",
+      "link_ig": "",
+      "link_twitter": "",
+      "link_linkedin": "",
+      "img": "",
+      "summary": ""
+    },
+    {
+      "name": "wiwien palupi",
+      "location": "Yogyakarta",
+      "school_sd": "SD 2",
+      "school_smp": "SMP 1",
+      "school_sma": "SMA Muhammadiyah 5 Yogyakarta",
+      "job": "ibu rt, online shop",
+      "link_wa": "",
+      "link_fb": "",
+      "link_ig": "",
+      "link_twitter": "",
+      "link_linkedin": "",
+      "img": "",
+      "summary": ""
+    },
+    {
+      "name": "Arie Willyana",
+      "location": "KualaSimpang",
+      "school_sd": "SD 1 dan SD 2",
+      "school_smp": "SMP 1",
+      "school_sma": "SMA YAPENA",
+      "job": "RSUD Kab. Aceh Tamiang",
+      "link_wa": "",
+      "link_fb": "",
+      "link_ig": "",
+      "link_twitter": "",
+      "link_linkedin": "",
+      "img": "",
+      "summary": ""
+    },
+    {
+      "name": "ratna ningsih",
+      "location": "Meulaboh",
+      "school_sd": "SD 2",
+      "school_smp": "SMP 2",
+      "school_sma": "SMA YAPENA",
+      "job": "jualan motor",
+      "link_wa": "",
+      "link_fb": "",
+      "link_ig": "",
+      "link_twitter": "",
+      "link_linkedin": "",
+      "img": "",
+      "summary": ""
+    },
+    {
+      "name": "Rita",
+      "location": "Banda Aceh",
+      "school_sd": "SD 3",
+      "school_smp": "SMP 1",
+      "school_sma": "SMA YAPENA",
+      "job": "Jual buku/mainan edukasi & fashion/aksesoris muslim dewasa + anak2 ",
+      "link_wa": "",
+      "link_fb": "",
+      "link_ig": "",
+      "link_twitter": "",
+      "link_linkedin": "",
+      "img": "",
+      "summary": ""
+    },
+    {
+      "name": "Andi irawan",
+      "location": "Balikpapan",
+      "school_sd": "SD 4",
+      "school_smp": "SMP 1",
+      "school_sma": "Smut krida nusantara bandung",
+      "job": "Reservoir engineer, pertamina hulu mahakam, migas",
+      "link_wa": "",
+      "link_fb": "",
+      "link_ig": "",
+      "link_twitter": "",
+      "link_linkedin": "",
+      "img": "",
+      "summary": ""
+    },
+    {
+      "name": "Aris Yulanda",
+      "location": "Lhokseumawe",
+      "school_sd": "SD 3",
+      "school_smp": "SMP 2",
+      "school_sma": "SMA YAPENA",
+      "job": "BRI",
+      "link_wa": "",
+      "link_fb": "",
+      "link_ig": "",
+      "link_twitter": "",
+      "link_linkedin": "",
+      "img": "",
+      "summary": ""
+    },
+    {
+      "name": "Sebastian Widodo ",
+      "location": "Jakarta",
+      "school_sd": "SD 1",
+      "school_smp": "SMP 1",
+      "school_sma": "",
+      "job": "Production House, Rental Equipment, Freelancer",
+      "link_wa": "",
+      "link_fb": "",
+      "link_ig": "",
+      "link_twitter": "",
+      "link_linkedin": "",
+      "img": "",
+      "summary": ""
+    },
+    {
+      "name": "Dara Malahayati",
+      "location": "Lhokseumawe",
+      "school_sd": "SD 2",
+      "school_smp": "SMP 1",
+      "school_sma": "SMU Mosa BNA",
+      "job": "Bisnis online",
+      "link_wa": "",
+      "link_fb": "",
+      "link_ig": "",
+      "link_twitter": "",
+      "link_linkedin": "",
+      "img": "",
+      "summary": ""
+    },
+    {
+      "name": "Dithy yelina",
+      "location": "Bandung",
+      "school_sd": "SD 2",
+      "school_smp": "SMP 1",
+      "school_sma": "Bandung",
+      "job": "Kafe ",
+      "link_wa": "",
+      "link_fb": "",
+      "link_ig": "",
+      "link_twitter": "",
+      "link_linkedin": "",
+      "img": "",
+      "summary": ""
+    },
+    {
+      "name": "Safriani/cut zein",
+      "location": "Medan",
+      "school_sd": "SD 2",
+      "school_smp": "SMP 2",
+      "school_sma": "Medan",
+      "job": "",
+      "link_wa": "",
+      "link_fb": "",
+      "link_ig": "",
+      "link_twitter": "",
+      "link_linkedin": "",
+      "img": "",
+      "summary": ""
+    },
+    {
+      "name": "Dian Hafrianni",
+      "location": "TangerangSelatan",
+      "school_sd": "SD 2",
+      "school_smp": "SMP 1",
+      "school_sma": "SMA YAPENA",
+      "job": "",
+      "link_wa": "",
+      "link_fb": "",
+      "link_ig": "",
+      "link_twitter": "",
+      "link_linkedin": "",
+      "img": "",
+      "summary": ""
+    },
+    {
+      "name": "TARI MELLISA RAFAR",
+      "location": "LHOKSEUMAWE",
+      "school_sd": "SD 1",
+      "school_smp": "SMP 1",
+      "school_sma": "SMA YAPENA",
+      "job": "PNS",
+      "link_wa": "",
+      "link_fb": "",
+      "link_ig": "",
+      "link_twitter": "",
+      "link_linkedin": "",
+      "img": "",
+      "summary": ""
+    },
+    {
+      "name": "Indri Irnandalia",
+      "location": "TangerangSelatan",
+      "school_sd": "SD 1",
+      "school_smp": "SMP 1",
+      "school_sma": "SMU Jakarta",
+      "job": "Konveksi Mukena",
+      "link_wa": "",
+      "link_fb": "",
+      "link_ig": "",
+      "link_twitter": "",
+      "link_linkedin": "",
+      "img": "",
+      "summary": ""
+    },
+    {
+      "name": "Sari Wardani",
+      "location": "BandaAceh",
+      "school_sd": "SD 3",
+      "school_smp": "SMP 2",
+      "school_sma": "SMA YAPENA",
+      "job": "Dosen",
+      "link_wa": "",
+      "link_fb": "",
+      "link_ig": "",
+      "link_twitter": "",
+      "link_linkedin": "",
+      "img": "",
+      "summary": ""
+    },
+    {
+      "name": "Teuku Anggara",
+      "location": "Malang",
+      "school_sd": "SD 1",
+      "school_smp": "SMP 1",
+      "school_sma": "SMA YAPENA",
+      "job": "",
+      "link_wa": "",
+      "link_fb": "",
+      "link_ig": "",
+      "link_twitter": "",
+      "link_linkedin": "",
+      "img": "",
+      "summary": ""
+    },
+    {
+      "name": "Maria Evayanty",
+      "location": "Lhokseumawe",
+      "school_sd": "SD 2",
+      "school_smp": "SMP 2",
+      "school_sma": "SMA YAPENA",
+      "job": "Wiraswasta",
+      "link_wa": "",
+      "link_fb": "",
+      "link_ig": "",
+      "link_twitter": "",
+      "link_linkedin": "",
+      "img": "",
+      "summary": ""
+    },
+    {
+      "name": "Fery Dermawan",
+      "location": "Bogor",
+      "school_sd": "SD 1",
+      "school_smp": "Nurul Hakim Deli Serdang",
+      "school_sma": "Al Karomah Brastagi",
+      "job": "Wiraswasta",
+      "link_wa": "",
+      "link_fb": "",
+      "link_ig": "",
+      "link_twitter": "",
+      "link_linkedin": "",
+      "img": "",
+      "summary": ""
+    },
+    {
+      "name": "Luthfi Al Rasyid",
+      "location": "Medan",
+      "school_sd": "SD 4",
+      "school_smp": "SMP 1",
+      "school_sma": "Medan",
+      "job": "",
+      "link_wa": "",
+      "link_fb": "",
+      "link_ig": "",
+      "link_twitter": "",
+      "link_linkedin": "",
+      "img": "",
+      "summary": ""
+    },
+    {
+      "name": "Andalucia Alfan",
+      "location": "Depok",
+      "school_sd": "SD 2",
+      "school_smp": "SMP 2",
+      "school_sma": "",
+      "job": "",
+      "link_wa": "",
+      "link_fb": "",
+      "link_ig": "",
+      "link_twitter": "",
+      "link_linkedin": "",
+      "img": "",
+      "summary": ""
+    },
+    {
+      "name": "Ramayuda Rahmad",
+      "location": "Yogyakarta",
+      "school_sd": "SD 3",
+      "school_smp": "SMP 2",
+      "school_sma": "",
+      "job": "",
+      "link_wa": "",
+      "link_fb": "",
+      "link_ig": "",
+      "link_twitter": "",
+      "link_linkedin": "",
+      "img": "",
+      "summary": ""
     },
     {
       "name": "IAN PINOTO",
-      "gender": "L",
-      "location": ""
-    },
-    {
-      "name": "ICUT ",
-      "gender": "P",
-      "location": ""
-    },
-    {
-      "name": "IMMANUEL CRISTIAN ",
-      "gender": "L",
-      "location": "MEDAN"
-    },
-    {
-      "name": "INDRI IRNANDALIA",
-      "gender": "P",
-      "location": "JAKARTA"
-    },
-    {
-      "name": "INTAN FARIDA",
-      "gender": "P",
-      "location": "DEPOK"
-    },
-    {
-      "name": "IQBAL PAKEH",
-      "gender": "L",
-      "location": ""
-    },
-    {
-      "name": "IQBAL RIDHA",
-      "gender": "L",
-      "location": ""
-    },
-    {
-      "name": "IRSYAD RAZAKI ",
-      "gender": "L",
-      "location": "BONTANG"
-    },
-    {
-      "name": "IWAN RANTONI",
-      "gender": "L",
-      "location": ""
-    },
-    {
-      "name": "JOHAN TRIPUTRA",
-      "gender": "L",
-      "location": "JAKARTA"
-    },
-    {
-      "name": "KARTONO",
-      "gender": "L",
-      "location": "ABUDHABI"
-    },
-    {
-      "name": "KHAIRIA",
-      "gender": "P ",
-      "location": "MEDAN"
-    },
-    {
-      "name": "KHAIRUNNISA",
-      "gender": "P ",
-      "location": "LAMPUNG"
-    },
-    {
-      "name": "KURNIAWAN NORAT",
-      "gender": "L",
-      "location": "JAKARTA"
-    },
-    {
-      "name": "LENA ",
-      "gender": "P",
-      "location": "BANDAACEH"
-    },
-    {
-      "name": "LIDYA VISCA NANDA",
-      "gender": "P ",
-      "location": ""
-    },
-    {
-      "name": "LINA SUSANTI",
-      "gender": "P",
-      "location": "MEDAN"
-    },
-    {
-      "name": "LONA MARIA",
-      "gender": "P",
-      "location": "JAKARTA"
-    },
-    {
-      "name": "LORITA FADIANTY",
-      "gender": "P",
-      "location": "DEPOK"
-    },
-    {
-      "name": "LUTFI AL RASYID",
-      "gender": "L",
-      "location": "MEDAN"
-    },
-    {
-      "name": "LUTFI PANHAR",
-      "gender": "L",
-      "location": ""
-    },
-    {
-      "name": "M ATSHAURI ",
-      "gender": "L",
-      "location": "YOGYAKARTA"
-    },
-    {
-      "name": "M FAHMI DJAMIL",
-      "gender": "L",
-      "location": ""
-    },
-    {
-      "name": "M FIFIN KOMBIH",
-      "gender": "L",
-      "location": "SURABAYA"
-    },
-    {
-      "name": "M ICHSAN",
-      "gender": "L",
-      "location": ""
-    },
-    {
-      "name": "M IRFAN ARIEF HASIBUAN",
-      "gender": "L",
-      "location": "JAKARTA"
-    },
-    {
-      "name": "M IVAN FIKRIADI",
-      "gender": "L",
-      "location": "BANDUNG"
-    },
-    {
-      "name": "MAHDALENA",
-      "gender": "P",
-      "location": ""
-    },
-    {
-      "name": "MARDIAN AQSA",
-      "gender": "L",
-      "location": "BALIKPAPAN"
-    },
-    {
-      "name": "MARDIANTI",
-      "gender": "P",
-      "location": ""
-    },
-    {
-      "name": "MAULANA KURNIAWAN",
-      "gender": "L",
-      "location": "MEDAN"
-    },
-    {
-      "name": "MAULIDYA RIZKI",
-      "gender": "P",
-      "location": "LHOKSEUMAWE"
-    },
-    {
-      "name": "MELLA POLIANTHY",
-      "gender": "P ",
-      "location": "MEDAN"
-    },
-    {
-      "name": "MEUTIA HANDAYANI",
-      "gender": "P",
-      "location": "LHOKSEUMAWE"
-    },
-    {
-      "name": "MIRZA MOSSADEQSHAH",
-      "gender": "L",
-      "location": "TANJUNG PINANG"
-    },
-    {
-      "name": "NAJMUL IKHWAN",
-      "gender": "L",
       "location": "BANDUNG",
-      "link": {
-        "wa": "https://wa.me/+628562220373"
-      }
+      "school_sd": "SD 1",
+      "school_smp": "SMP 1",
+      "school_sma": "",
+      "job": "Currently working in oil and gas industry.",
+      "link_wa": "",
+      "link_fb": "",
+      "link_ig": "",
+      "link_twitter": "",
+      "link_linkedin": "",
+      "img": "",
+      "summary": ""
     },
     {
-      "name": "NASRULLAH",
-      "gender": "L",
-      "location": "JAKARTA"
+      "name": "Debby wanty",
+      "location": "Medan",
+      "school_sd": "SD 2",
+      "school_smp": "SMP 1",
+      "school_sma": "Sma harapan medan",
+      "job": "Klinik therapi anak berkebutuhan khusus",
+      "link_wa": "",
+      "link_fb": "",
+      "link_ig": "",
+      "link_twitter": "",
+      "link_linkedin": "",
+      "img": "",
+      "summary": ""
     },
     {
-      "name": "NILA HERLIA",
-      "gender": "P",
-      "location": ""
+      "name": "Lidya visca nanda",
+      "location": "JakartaSelatan",
+      "school_sd": "SD 1",
+      "school_smp": "SMP 1",
+      "school_sma": "Qatar",
+      "job": "",
+      "link_wa": "",
+      "link_fb": "",
+      "link_ig": "",
+      "link_twitter": "",
+      "link_linkedin": "",
+      "img": "",
+      "summary": ""
     },
     {
-      "name": "NILA PURNAMA",
-      "gender": "P",
-      "location": ""
+      "name": "Hayria",
+      "location": "Medan",
+      "school_sd": "SD 1",
+      "school_smp": "SMP 1",
+      "school_sma": "Sudah di Medan",
+      "job": "Ibu rumah tangga",
+      "link_wa": "",
+      "link_fb": "",
+      "link_ig": "",
+      "link_twitter": "",
+      "link_linkedin": "",
+      "img": "",
+      "summary": ""
     },
     {
-      "name": "NINA MERINA",
-      "gender": "P",
-      "location": "MEDAN"
+      "name": "Muhammad Chandrataruna",
+      "location": "TangerangSelatan",
+      "school_sd": "SD 3",
+      "school_smp": "SMP 2",
+      "school_sma": "SMAN 4 Jakarta",
+      "job": "",
+      "link_wa": "",
+      "link_fb": "",
+      "link_ig": "",
+      "link_twitter": "",
+      "link_linkedin": "",
+      "img": "",
+      "summary": ""
     },
     {
-      "name": "NINA NOVERA",
-      "gender": "P",
-      "location": ""
+      "name": "Nina Novera",
+      "location": "TangerangSelatan",
+      "school_sd": "SD 1",
+      "school_smp": "SMP 1",
+      "school_sma": "",
+      "job": "Jasa - Event Organizer (Seminar, 3D Design, Conference)",
+      "link_wa": "",
+      "link_fb": "",
+      "link_ig": "",
+      "link_twitter": "",
+      "link_linkedin": "",
+      "img": "",
+      "summary": ""
     },
     {
-      "name": "NITA PAHLEVI",
-      "gender": "P",
-      "location": "SEMARANG"
+      "name": "Vera verdyani",
+      "location": "Jakarta",
+      "school_sd": "SD 1",
+      "school_smp": "SMP 1",
+      "school_sma": "SMA YAPENA",
+      "job": "",
+      "link_wa": "",
+      "link_fb": "",
+      "link_ig": "",
+      "link_twitter": "",
+      "link_linkedin": "",
+      "img": "",
+      "summary": ""
     },
     {
-      "name": "NOVALIANTO",
-      "gender": "L",
-      "location": "BANDAACEH"
+      "name": "Mardian aqsa",
+      "location": "Balikpapan",
+      "school_sd": "SD 2",
+      "school_smp": "SMP 1",
+      "school_sma": "Out",
+      "job": "Assiaapp",
+      "link_wa": "",
+      "link_fb": "",
+      "link_ig": "",
+      "link_twitter": "",
+      "link_linkedin": "",
+      "img": "",
+      "summary": ""
     },
     {
-      "name": "PRITA YOLANDA",
-      "gender": "P ",
-      "location": ""
+      "name": "Syarifah marnita mutia",
+      "location": "Batam",
+      "school_sd": "SD 4",
+      "school_smp": "SMP 2",
+      "school_sma": "Bandung",
+      "job": "Irt",
+      "link_wa": "",
+      "link_fb": "",
+      "link_ig": "",
+      "link_twitter": "",
+      "link_linkedin": "",
+      "img": "",
+      "summary": ""
     },
     {
-      "name": "RAFIQOH PURNAMASARI",
-      "gender": "P",
-      "location": "MEDAN"
+      "name": "JULIA BUDIANI",
+      "location": "LHOKSEUMAWE",
+      "school_sd": "SD 3",
+      "school_smp": "SMP 2",
+      "school_sma": "SMF Apipsu Medan",
+      "job": "PNS",
+      "link_wa": "",
+      "link_fb": "",
+      "link_ig": "",
+      "link_twitter": "",
+      "link_linkedin": "",
+      "img": "",
+      "summary": ""
     },
     {
-      "name": "RAJIV AL RASYID",
-      "gender": "L ",
-      "location": "JAKARTA"
+      "name": "Hady Muzakkir",
+      "location": "Bireuen",
+      "school_sd": "SD 2",
+      "school_smp": "SMP 2",
+      "school_sma": "SMA YAPENA",
+      "job": "",
+      "link_wa": "",
+      "link_fb": "",
+      "link_ig": "",
+      "link_twitter": "",
+      "link_linkedin": "",
+      "img": "",
+      "summary": ""
     },
     {
-      "name": "RAMAYUDHA",
-      "gender": "L",
-      "location": "AMSTERDAM"
+      "name": "Retno estuning ratri",
+      "location": "Bandung",
+      "school_sd": "SD 3",
+      "school_smp": "SMP 1",
+      "school_sma": "Smat krida nusantara",
+      "job": "Psikolog",
+      "link_wa": "",
+      "link_fb": "",
+      "link_ig": "",
+      "link_twitter": "",
+      "link_linkedin": "",
+      "img": "",
+      "summary": ""
     },
     {
-      "name": "RATNA MARISKA",
-      "gender": "P",
-      "location": "PALEMBANG"
+      "name": "Erry Rustiansyah",
+      "location": "Pontianak",
+      "school_sd": "SD 4",
+      "school_smp": "SMP 1",
+      "school_sma": "SMA N 2 Medan",
+      "job": "Perkebunan",
+      "link_wa": "",
+      "link_fb": "",
+      "link_ig": "",
+      "link_twitter": "",
+      "link_linkedin": "",
+      "img": "",
+      "summary": ""
     },
     {
-      "name": "RATNA NINGSIH",
-      "gender": "P",
-      "location": "MEULABOH"
+      "name": "Intan Faridasari Kusumawaty",
+      "location": "Depok",
+      "school_sd": "SD 1",
+      "school_smp": "SMP Harapan 2 Medan",
+      "school_sma": "SMA 1 Medan",
+      "job": "Dokter",
+      "link_wa": "",
+      "link_fb": "",
+      "link_ig": "",
+      "link_twitter": "",
+      "link_linkedin": "",
+      "img": "",
+      "summary": ""
     },
     {
-      "name": "RATNO NUGROHO",
-      "gender": "L",
-      "location": "BATAM"
+      "name": "Siska mayasari",
+      "location": "Bireuen ",
+      "school_sd": "SD 2",
+      "school_smp": "SMP 2",
+      "school_sma": "SMA YAPENA",
+      "job": "Baker bread and cake",
+      "link_wa": "",
+      "link_fb": "",
+      "link_ig": "",
+      "link_twitter": "",
+      "link_linkedin": "",
+      "img": "",
+      "summary": ""
     },
     {
-      "name": "RENA MULIDA",
-      "gender": "P",
-      "location": ""
+      "name": "Fakhri Anindita",
+      "location": "JakartaSelatan",
+      "school_sd": "SD 1",
+      "school_smp": "Di Bogor",
+      "school_sma": "Di Bogor",
+      "job": "Photographer",
+      "link_wa": "",
+      "link_fb": "",
+      "link_ig": "",
+      "link_twitter": "",
+      "link_linkedin": "",
+      "img": "",
+      "summary": ""
     },
     {
-      "name": "RENY AMALIA",
-      "gender": "P",
-      "location": ""
+      "name": "Hendra Widiyanto",
+      "location": "Tangerang Selatan",
+      "school_sd": "SD 1",
+      "school_smp": "SMP 1",
+      "school_sma": "SMU Muhammadiyah 1",
+      "job": "OHS Expert",
+      "link_wa": "",
+      "link_fb": "",
+      "link_ig": "",
+      "link_twitter": "",
+      "link_linkedin": "",
+      "img": "",
+      "summary": ""
     },
     {
-      "name": "RETNO",
-      "gender": "P",
-      "location": "BANDUNG"
+      "name": "Reny amalia ",
+      "location": "Pekanbaru ",
+      "school_sd": "SD 3",
+      "school_smp": "SMP 2",
+      "school_sma": "Smun 9 malang",
+      "job": "",
+      "link_wa": "",
+      "link_fb": "",
+      "link_ig": "",
+      "link_twitter": "",
+      "link_linkedin": "",
+      "img": "",
+      "summary": ""
     },
     {
-      "name": "REZA MAHNUR",
-      "gender": "L",
-      "location": "LHOKSEUMAWE"
+      "name": "Anna Millizia",
+      "location": "Lhokseumawe",
+      "school_sd": "SD 4",
+      "school_smp": "SMP 2",
+      "school_sma": "SMUN 1 Medan",
+      "job": "Dokter spesialis anestesi",
+      "link_wa": "",
+      "link_fb": "",
+      "link_ig": "",
+      "link_twitter": "",
+      "link_linkedin": "",
+      "img": "",
+      "summary": ""
     },
     {
-      "name": "RINI",
-      "gender": "P",
-      "location": "LHOKSEUMAWE"
+      "name": "Lina Susanti",
+      "location": "Medan",
+      "school_sd": "SD 3",
+      "school_smp": "SMP 1",
+      "school_sma": "SMA YAPENA",
+      "job": "Jual snack2, cemilan, kue kering",
+      "link_wa": "",
+      "link_fb": "",
+      "link_ig": "",
+      "link_twitter": "",
+      "link_linkedin": "",
+      "img": "",
+      "summary": ""
     },
     {
-      "name": "RITA",
-      "gender": "P",
-      "location": ""
+      "name": "Siska mayasari",
+      "location": "Bireuen",
+      "school_sd": "SD 2",
+      "school_smp": "SMP 2",
+      "school_sma": "SMA YAPENA",
+      "job": "Baker bread cake",
+      "link_wa": "",
+      "link_fb": "",
+      "link_ig": "",
+      "link_twitter": "",
+      "link_linkedin": "",
+      "img": "",
+      "summary": ""
     },
     {
-      "name": "RIZKI RINALDI",
-      "gender": "L",
-      "location": "JAKARTA"
+      "name": "Muhammad ichsan",
+      "location": "Bireuen",
+      "school_sd": "SD 1",
+      "school_smp": "SMP 1",
+      "school_sma": "SMA YAPENA",
+      "job": "Pegawai negri",
+      "link_wa": "",
+      "link_fb": "",
+      "link_ig": "",
+      "link_twitter": "",
+      "link_linkedin": "",
+      "img": "",
+      "summary": ""
     },
     {
-      "name": "RIZKY ARUNSYAHPUTRA",
-      "gender": "L",
-      "location": "MEDAN"
+      "name": "Aini Shafra Anwar (Aan) ",
+      "location": "KomplekArun",
+      "school_sd": "SD 2",
+      "school_smp": "SMP 2",
+      "school_sma": "SMA YAPENA",
+      "job": "Konselor/therapis Anak Berkebutuhan Khusus\n",
+      "link_wa": "",
+      "link_fb": "",
+      "link_ig": "",
+      "link_twitter": "",
+      "link_linkedin": "",
+      "img": "",
+      "summary": "Produksi makanan khas Abon dan Keumamah Tuna"
     },
     {
-      "name": "RIZKY REZAHDI",
-      "gender": "L",
-      "location": "JAKARTA"
+      "name": "Freya Amarantha Sutan Assin",
+      "location": "Bali",
+      "school_sd": "SD 3",
+      "school_smp": "SMP 2",
+      "school_sma": "Global Jaya",
+      "job": "Fashion Design",
+      "link_wa": "",
+      "link_fb": "",
+      "link_ig": "",
+      "link_twitter": "",
+      "link_linkedin": "",
+      "img": "",
+      "summary": ""
     },
     {
-      "name": "ROBBY ILHAM",
-      "gender": "L",
-      "location": "MAKASSAR"
+      "name": "Safrina",
+      "location": "Lhokseumawe",
+      "school_sd": "SD 1",
+      "school_smp": "SMP 1",
+      "school_sma": "SMA YAPENA",
+      "job": "PNS",
+      "link_wa": "",
+      "link_fb": "",
+      "link_ig": "",
+      "link_twitter": "",
+      "link_linkedin": "",
+      "img": "",
+      "summary": ""
     },
     {
-      "name": "RULLY",
-      "gender": "L",
-      "location": ""
+      "name": "Muhammad hamzah",
+      "location": "Aceh",
+      "school_sd": "SD 3",
+      "school_smp": "SMP 2",
+      "school_sma": "SMA YAPENA",
+      "job": "Polri",
+      "link_wa": "",
+      "link_fb": "",
+      "link_ig": "",
+      "link_twitter": "",
+      "link_linkedin": "",
+      "img": "",
+      "summary": ""
     },
     {
-      "name": "RURANHA",
-      "gender": "L",
-      "location": "JAKARTA"
+      "name": "Maulana Kurniawan",
+      "location": "Medan",
+      "school_sd": "SD 2",
+      "school_smp": "SMP 1",
+      "school_sma": "SMA YAPENA",
+      "job": "Web/Mobile App Programmer",
+      "link_wa": "",
+      "link_fb": "",
+      "link_ig": "",
+      "link_twitter": "",
+      "link_linkedin": "",
+      "img": "",
+      "summary": ""
     },
     {
-      "name": "SARI WARDANI",
-      "gender": "P",
-      "location": ""
+      "name": "Juliana",
+      "location": "BandaAceh",
+      "school_sd": "SD 1",
+      "school_smp": "SMP 1",
+      "school_sma": "SMA YAPENA",
+      "job": "ASN Kementerian Agama",
+      "link_wa": "",
+      "link_fb": "",
+      "link_ig": "",
+      "link_twitter": "",
+      "link_linkedin": "",
+      "img": "",
+      "summary": ""
     },
     {
-      "name": "SAYED FAZDLAN REZA",
-      "gender": "L",
-      "location": "MEDAN"
+      "name": "Cut Keumala Hayati",
+      "location": "Sydney",
+      "school_sd": "SD 4",
+      "school_smp": "SMP 1",
+      "school_sma": "SMA YAPENA",
+      "job": "",
+      "link_wa": "",
+      "link_fb": "",
+      "link_ig": "",
+      "link_twitter": "",
+      "link_linkedin": "",
+      "img": "",
+      "summary": ""
     },
     {
-      "name": "SISKA ANANDA",
-      "gender": "P",
-      "location": ""
+      "name": "Mardianti",
+      "location": "Langsa",
+      "school_sd": "SD 3",
+      "school_smp": "SMP 2",
+      "school_sma": "SMA YAPENA",
+      "job": "Dokter",
+      "link_wa": "",
+      "link_fb": "",
+      "link_ig": "",
+      "link_twitter": "",
+      "link_linkedin": "",
+      "img": "",
+      "summary": ""
     },
     {
-      "name": "SOFRAN SOFIAN",
-      "gender": "L",
-      "location": "BANDAACEH"
+      "name": "Frans Mario Halomoan Simanjuntak",
+      "location": "TangerangSelatan",
+      "school_sd": "SD 1",
+      "school_smp": "SMP 1",
+      "school_sma": "SMU Immanuel Medan",
+      "job": "IT",
+      "link_wa": "",
+      "link_fb": "",
+      "link_ig": "",
+      "link_twitter": "",
+      "link_linkedin": "",
+      "img": "",
+      "summary": "Bekerja di perusahaan IT yang fokus ke IT Network dan mempunyai usaha Mangat Delight yang menjual snack seperti brownies & cheese cake"
     },
     {
-      "name": "SUGONO",
-      "gender": "L",
-      "location": ""
+      "name": "Dian Hafrianni",
+      "location": "TangerangSelatan",
+      "school_sd": "SD 2",
+      "school_smp": "SMP 1",
+      "school_sma": "SMA YAPENA",
+      "job": "Ibu rumah tangga",
+      "link_wa": "",
+      "link_fb": "",
+      "link_ig": "",
+      "link_twitter": "",
+      "link_linkedin": "",
+      "img": "",
+      "summary": ""
     },
     {
-      "name": "T ANGGARA ",
-      "gender": "L",
-      "location": "MALANG"
+      "name": "Harry Kurniawan",
+      "location": "Binjai",
+      "school_sd": "SD 2",
+      "school_smp": "SMP 2",
+      "school_sma": "SMA YAPENA",
+      "job": "Photographer, Industrial Constractor, Macrame Artist.",
+      "link_wa": "",
+      "link_fb": "",
+      "link_ig": "",
+      "link_twitter": "",
+      "link_linkedin": "",
+      "img": "",
+      "summary": ""
     },
     {
-      "name": "T MIRZAL",
-      "gender": "L",
-      "location": "BANDAACEH"
+      "name": "Nila Purnama",
+      "location": "BandaAceh",
+      "school_sd": "SD 1",
+      "school_smp": "SMP 1",
+      "school_sma": "SMA YAPENA",
+      "job": "",
+      "link_wa": "",
+      "link_fb": "",
+      "link_ig": "",
+      "link_twitter": "",
+      "link_linkedin": "",
+      "img": "",
+      "summary": ""
     },
     {
-      "name": "T RIZKI ADITIA",
-      "gender": "L",
-      "location": ""
+      "name": "ade irwansyah",
+      "location": "medan",
+      "school_sd": "SD 4",
+      "school_smp": "SMP 2",
+      "school_sma": "SMA YAPENA",
+      "job": "DJI BATTERY SOLUTION INDONESIA (DBSI Sumut),LIVE STREAMING & Event Organizer",
+      "link_wa": "",
+      "link_fb": "",
+      "link_ig": "",
+      "link_twitter": "",
+      "link_linkedin": "",
+      "img": "",
+      "summary": ""
     },
     {
-      "name": "TARIE MELISA",
-      "gender": "P",
-      "location": "LHOKSEUMAWE"
+      "name": "Fuady Azlin",
+      "location": "Jakarta",
+      "school_sd": "SD 4",
+      "school_smp": "SMP 2",
+      "school_sma": "SMANSA MEDAN",
+      "job": "Konsultan dan TaakkaaT Coffee Owner",
+      "link_wa": "",
+      "link_fb": "",
+      "link_ig": "",
+      "link_twitter": "",
+      "link_linkedin": "",
+      "img": "",
+      "summary": ""
     },
     {
-      "name": "TREYZ",
-      "gender": "L",
-      "location": "SULTENG"
+      "name": "Rezza Agusfian",
+      "location": "Malang",
+      "school_sd": "SD 2",
+      "school_smp": "SMP 2",
+      "school_sma": "SMA YAPENA",
+      "job": "",
+      "link_wa": "",
+      "link_fb": "",
+      "link_ig": "",
+      "link_twitter": "",
+      "link_linkedin": "",
+      "img": "",
+      "summary": ""
     },
     {
-      "name": "ULHIE JULIA",
-      "gender": "P",
-      "location": ""
+      "name": "Meutia Handayani",
+      "location": "Lhokseumawe",
+      "school_sd": "SD 3",
+      "school_smp": "SMP 2",
+      "school_sma": "SMA YAPENA",
+      "job": "Ibu rumah tangga",
+      "link_wa": "",
+      "link_fb": "",
+      "link_ig": "",
+      "link_twitter": "",
+      "link_linkedin": "",
+      "img": "",
+      "summary": ""
     },
     {
-      "name": "ULLIE AGUSTI",
-      "gender": "P",
-      "location": "LHOKSEUMAWE"
+      "name": "achmad yanie",
+      "location": "pekanbaru ",
+      "school_sd": "SD 1",
+      "school_smp": "SMP 1",
+      "school_sma": "SMA YAPENA",
+      "job": "event organizer (EO) , editor video",
+      "link_wa": "",
+      "link_fb": "",
+      "link_ig": "",
+      "link_twitter": "",
+      "link_linkedin": "",
+      "img": "",
+      "summary": ""
     },
     {
-      "name": "VICKY PATRIA FACHRURAZI",
-      "gender": "L",
-      "location": "QATAR"
+      "name": "M.Ricci.L",
+      "location": "Medan",
+      "school_sd": "SD 2",
+      "school_smp": "SMP 2",
+      "school_sma": "Smu swasta harapan,medan",
+      "job": "Wiraswasta",
+      "link_wa": "",
+      "link_fb": "",
+      "link_ig": "",
+      "link_twitter": "",
+      "link_linkedin": "",
+      "img": "",
+      "summary": ""
     },
     {
-      "name": "VIVIORINY",
-      "gender": "P",
-      "location": "SEMARANG"
+      "name": "Dian Agusta",
+      "location": "Banten",
+      "school_sd": "SD 3",
+      "school_smp": "SMP 2",
+      "school_sma": "SMU N 3 Banda Aceh",
+      "job": "Chemical Industry",
+      "link_wa": "",
+      "link_fb": "",
+      "link_ig": "",
+      "link_twitter": "",
+      "link_linkedin": "",
+      "img": "",
+      "summary": ""
+    },
+    {
+      "name": "Dinoe Romadesta",
+      "location": "Medan",
+      "school_sd": "SD 3",
+      "school_smp": "SMP 2",
+      "school_sma": "SMUN 4 Medan",
+      "job": "",
+      "link_wa": "",
+      "link_fb": "",
+      "link_ig": "",
+      "link_twitter": "",
+      "link_linkedin": "",
+      "img": "",
+      "summary": ""
     },
     {
       "name": "WESTLY PANGGABEAN",
-      "gender": "L",
-      "location": "BALI"
+      "location": "BALI",
+      "school_sd": "SD 1",
+      "school_smp": "SMP 1",
+      "school_sma": "SMUK IMMANUEL,  MEDAN",
+      "job": "JASA",
+      "link_wa": "",
+      "link_fb": "",
+      "link_ig": "",
+      "link_twitter": "",
+      "link_linkedin": "",
+      "img": "",
+      "summary": ""
     },
     {
-      "name": "WIWIEN PALUPI",
-      "gender": "P",
-      "location": "YOGYAKARTA"
+      "name": "Maulidya Rizki",
+      "location": "Lhokseumawe",
+      "school_sd": "SD 2",
+      "school_smp": "SMP 2",
+      "school_sma": "SMA YAPENA",
+      "job": "BSI Bank Syariah Indonesia ",
+      "link_wa": "",
+      "link_fb": "",
+      "link_ig": "",
+      "link_twitter": "",
+      "link_linkedin": "",
+      "img": "",
+      "summary": ""
     },
     {
-      "name": "WULAN KAISARI",
-      "gender": "P",
-      "location": "BANDUNG"
+      "name": "Sofran",
+      "location": "BandaAceh",
+      "school_sd": "SD 1",
+      "school_smp": "SMP 1",
+      "school_sma": "SMA YAPENA",
+      "job": "",
+      "link_wa": "",
+      "link_fb": "",
+      "link_ig": "",
+      "link_twitter": "",
+      "link_linkedin": "",
+      "img": "",
+      "summary": ""
     },
     {
-      "name": "YASIN",
-      "gender": "L",
-      "location": ""
+      "name": "Nella Nofita",
+      "location": "Bekasi",
+      "school_sd": "SD 4",
+      "school_smp": "SMP 1",
+      "school_sma": "",
+      "job": "Behaviour analyst",
+      "link_wa": "",
+      "link_fb": "",
+      "link_ig": "",
+      "link_twitter": "",
+      "link_linkedin": "",
+      "img": "",
+      "summary": ""
     },
     {
-      "name": "YESSY ARINA ",
-      "gender": "P",
-      "location": "MEDAN"
+      "name": "Zaid Arham",
+      "location": "AcehBesar",
+      "school_sd": "SD 1",
+      "school_smp": "SMP 1",
+      "school_sma": "SMA Mosa",
+      "job": "PNS",
+      "link_wa": "",
+      "link_fb": "",
+      "link_ig": "",
+      "link_twitter": "",
+      "link_linkedin": "",
+      "img": "",
+      "summary": ""
     },
     {
-      "name": "YUSRAN BANI",
-      "gender": "L",
-      "location": "LHOKSEUMAWE"
+      "name": "Vicky F. Fakhrurrazi",
+      "location": "Qatar",
+      "school_sd": "SD 1",
+      "school_smp": "SMP 1",
+      "school_sma": "SMUN 46 Jakarta Selatan",
+      "job": "Procurement, Contracting & Supply Chain Management",
+      "link_wa": "",
+      "link_fb": "",
+      "link_ig": "",
+      "link_twitter": "",
+      "link_linkedin": "",
+      "img": "",
+      "summary": ""
     },
     {
-      "name": "YVONE LAURA",
-      "gender": "P",
-      "location": "BEKASI"
+      "name": "Viviorini",
+      "location": "Semarang",
+      "school_sd": "SD 3",
+      "school_smp": "SMP 2",
+      "school_sma": "SMA YAPENA",
+      "job": "PNS",
+      "link_wa": "",
+      "link_fb": "",
+      "link_ig": "",
+      "link_twitter": "",
+      "link_linkedin": "",
+      "img": "",
+      "summary": ""
     },
     {
-      "name": "ZAID ARHAM",
-      "gender": "L",
-      "location": ""
+      "name": "LENA ROMAWANA",
+      "location": "BandaAceh",
+      "school_sd": "SD 1",
+      "school_smp": "SMP 1",
+      "school_sma": "SMA DI JOGJA",
+      "job": "PT HM SAMPOERNA TBK",
+      "link_wa": "",
+      "link_fb": "",
+      "link_ig": "",
+      "link_twitter": "",
+      "link_linkedin": "",
+      "img": "",
+      "summary": ""
     },
     {
-      "name": "ZAID IBN HASAN",
-      "gender": "L",
-      "location": "JAKARTA"
+      "name": "NOVALIANTO",
+      "location": "AcehBesar",
+      "school_sd": "SD 1",
+      "school_smp": "SMP 1",
+      "school_sma": "SMA YAPENA",
+      "job": "",
+      "link_wa": "",
+      "link_fb": "",
+      "link_ig": "",
+      "link_twitter": "",
+      "link_linkedin": "",
+      "img": "",
+      "summary": ""
     },
     {
-      "name": "ZIZANA F",
-      "gender": "P",
-      "location": "QATAR"
+      "name": "Fira rafina",
+      "location": "Medan",
+      "school_sd": "SD Al Alaq",
+      "school_smp": "PonPes Alkautsar Alakbar medan",
+      "school_sma": "SMA YAPENA",
+      "job": "Ibu rumah tangga",
+      "link_wa": "",
+      "link_fb": "",
+      "link_ig": "",
+      "link_twitter": "",
+      "link_linkedin": "",
+      "img": "",
+      "summary": ""
     },
     {
-      "name": "ZULFIKAR",
-      "gender": "L",
-      "location": "LHOKSEUMAWE"
+      "name": "Ratna Mariska",
+      "location": "Palembang",
+      "school_sd": "SD 1",
+      "school_smp": "SMP 1",
+      "school_sma": "Bina Warga, Palembang",
+      "job": "",
+      "link_wa": "",
+      "link_fb": "",
+      "link_ig": "",
+      "link_twitter": "",
+      "link_linkedin": "",
+      "img": "",
+      "summary": ""
+    },
+    {
+      "name": "Fury Maulina",
+      "location": "Amsterdam",
+      "school_sd": "SD 3",
+      "school_smp": "SMP 2",
+      "school_sma": "SMA YAPENA",
+      "job": "Dosen",
+      "link_wa": "",
+      "link_fb": "",
+      "link_ig": "",
+      "link_twitter": "",
+      "link_linkedin": "",
+      "img": "",
+      "summary": ""
+    },
+    {
+      "name": "Kurniawan Norat",
+      "location": "Tangerang",
+      "school_sd": "SD 3",
+      "school_smp": "SMP 2",
+      "school_sma": "SMA YAPENA",
+      "job": "BPOM",
+      "link_wa": "",
+      "link_fb": "",
+      "link_ig": "",
+      "link_twitter": "",
+      "link_linkedin": "",
+      "img": "",
+      "summary": ""
+    },
+    {
+      "name": "Yvonne Lora Simamora (onni)",
+      "location": "Bekasi",
+      "school_sd": "SD 3",
+      "school_smp": "SMP 1",
+      "school_sma": "",
+      "job": "Ibu rumah tangga",
+      "link_wa": "",
+      "link_fb": "",
+      "link_ig": "",
+      "link_twitter": "",
+      "link_linkedin": "",
+      "img": "",
+      "summary": ""
+    },
+    {
+      "name": "ABU ZABEDAN",
+      "location": "YOGYAKARTA",
+      "school_sd": "SD 1",
+      "school_smp": "SMP 1",
+      "school_sma": "SMU 2 DEPOK JAWA BARAT",
+      "job": "Perbankan",
+      "link_wa": "",
+      "link_fb": "",
+      "link_ig": "",
+      "link_twitter": "",
+      "link_linkedin": "",
+      "img": "",
+      "summary": ""
+    },
+    {
+      "name": "Juwita Apriyani",
+      "location": "Medan",
+      "school_sd": "SD 2",
+      "school_smp": "Ponpes RH medan",
+      "school_sma": "SMA YAPENA",
+      "job": "IRT",
+      "link_wa": "",
+      "link_fb": "",
+      "link_ig": "",
+      "link_twitter": "",
+      "link_linkedin": "",
+      "img": "",
+      "summary": ""
+    },
+    {
+      "name": "Andalivia",
+      "location": "TangerangSelatan",
+      "school_sd": "SD 2",
+      "school_smp": "SMP 2",
+      "school_sma": "SMA YAPENA",
+      "job": "IRT",
+      "link_wa": "",
+      "link_fb": "",
+      "link_ig": "",
+      "link_twitter": "",
+      "link_linkedin": "",
+      "img": "",
+      "summary": ""
     }
 ]
 

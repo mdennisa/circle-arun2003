@@ -10,21 +10,20 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
     <!-- UIkit CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.6.16/dist/css/uikit.min.css" />
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v2.1.5/css/unicons.css">
     <link rel="stylesheet" href="./app.css">
 
 </head>
 <body>
 
-    <div class="uk-container">
+    <div class="uk-section">
 
-        <div class="uk-padding">
-            <table class="uk-table uk-table-divider" id="table-friends">
+        <div class="">
+            <table class="uk-table uk-table-responsive uk-table-divider" id="table-friends">
                 <thead>
                     <tr>
-                        <th>Name</th>
-                        <th>Location</th>
-                        <th>Phone</th>
-                        <th>Link</th>
+                        <th class="uk-width-1-2">Name</th>
+                        <th class="uk-width-1-2">Location</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -32,6 +31,17 @@
             </table>
         </div>
 
+    </div>
+
+    <div id="modal-full" class="uk-modal-full" uk-modal>
+        <div class="uk-modal-dialog">
+            <button class="uk-modal-close-full uk-close-large" type="button" uk-close></button>
+            <div class="uk-flex uk-flex-center uk-flex-middle" id="modal-container">
+                <div class="uk-container uk-container-small uk-padding uk-box-shadow-small" id="profile-container">
+                    <!-- template here -->
+                </div>
+            </div>
+        </div>
     </div>
 
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
@@ -71,31 +81,87 @@ jQuery(function($) {
 
         for (let friend of result) {
 
-            let link = ''
-            if (typeof friend.item.link !== "undefined") {
-                let ig = (typeof friend.item.link.ig === "undefined") ? '' : friend.item.link.ig
-                let wa = (typeof friend.item.link.wa === "undefined") ? '' : friend.item.link.wa
-
-                let ig_link = (ig === '') ? '' : `<a href="${friend.item.link.ig}" target="_blank">instagram</a>`
-                let wa_link = (wa === '') ? '' : `<a href="${friend.item.link.wa}" target="_blank">wa</a>`
-
-                link = `
-                    <div>${ig_link}</div>
-                    <div>${wa_link}</div>
-                `
-            }
-
             let row = `
                 <tr>
-                    <td>${friend.item.name}</td>
+                    <td><a href="#" class="view-profile" key="${friend.refIndex}">${friend.item.name}</a></td>
                     <td class="uk-text-muted">${friend.item.location}</td>
-                    <td></td>
-                    <td><div class="uk-text-small">${link}</div></td>
                 </tr>
             `
             $('#table-friends tbody').append(row)
         }
     }
+
+    $('#table-friends').on('click', '.view-profile', function(e) {
+        e.preventDefault()
+
+        let id = $(this).attr('key')
+        let friend = db.friends[id]
+        // check data if exists
+        let job = friend.job ?? ''
+        let img = friend.img ?? ''
+        // template
+        let tpl = ''
+        if (img) {
+            tpl += `
+                    <div class="uk-flex uk-flex-column uk-flex-middle">
+                        <div class="uk-margin-bottom profile-avatar">
+                            <img src="${img}" class="uk-border-circle" alt="">
+                        </div>
+                    </div>
+            `
+        }
+        tpl += `
+                    <div class="profile-name uk-margin-small-bottom">
+                        ${friend.name}
+                    </div>
+                    <div class="profile-location">
+                        <i class="uil uil-map-marker"></i>
+                        <span class="uk-text-uppercase">${friend.location}</span>
+                    </div>
+                    <div class="profile-job">
+                        <i class="uil uil-user-circle"></i>
+                        <span class="">${job}</span>
+                    </div>
+                    <hr>
+        `
+
+        let profile_school = '<p>Pernah bersekolah di: <ul>';
+        if (typeof friend.school_sd != 'undefined') {
+            profile_school +=  `<li>${friend.school_sd}</li>`
+        }
+        if (typeof friend.school_smp != 'undefined') {
+            profile_school +=  `<li>${friend.school_smp}</li>`
+        }
+        if (typeof friend.school_sma != 'undefined') {
+            profile_school +=  `<li>${friend.school_sma}</li>`
+        }
+        profile_school += '</ul><p>'
+        tpl += profile_school
+
+        let summary = (typeof friend.summary == 'undefined') ?
+            '<p><span class="uk-text-muted">Sedang dalam pencarian...</span></p>' :
+            `<p><span class="">${friend.summary}</span></p>`
+        tpl += `${summary}<hr>`
+
+        let profile_link = '<div class="profile-link uk-text-center">'
+        if (typeof friend.link_fb != 'undefined' && friend.link_fb != '') {
+            profile_link += `<a href="${friend.link_fb}" target="_blank" class="link-fb"><i class="uil uil-facebook"></i></a>`
+        }
+        if (typeof friend.link_ig != 'undefined' && friend.link_ig != '') {
+            profile_link += `<a href="${friend.link_ig}" target="_blank" class="link-ig"><i class="uil uil-instagram-alt"></i></a>`
+        }
+        if (typeof friend.link_linkedin != 'undefined' && friend.link_linkedin != '') {
+            profile_link += `<a href="${friend.link_linkedin}" target="_blank" class="link-linkedin"><i class="uil uil-linkedin"></i></a>`
+        }
+        if (typeof friend.link_wa != 'undefined' && friend.link_wa != '') {
+            profile_link += `<a href="${friend.link_wa}" target="_blank" class="link-wa"><i class="uil uil-whatsapp-alt"></i></a>`
+        }
+        profile_link += '</div>'
+        tpl += profile_link
+
+        $('#profile-container').html(tpl)
+        UIkit.modal('#modal-full').show()
+    })
 
 });
 </script>
