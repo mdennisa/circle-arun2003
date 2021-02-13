@@ -183,6 +183,14 @@ const locations = [
         name: "Palembang",
         coordinate: [-2.9888297, 104.756857]
     },
+    {
+        name: "Bangkok",
+        coordinate: [13.7544238, 100.4930399]
+    },
+    {
+        name: "Sampit",
+        coordinate: [-2.5389113, 112.949389]
+    },
 ]
 
 export default locations;
