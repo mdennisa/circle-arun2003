@@ -10,6 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
     <!-- UIkit CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.6.16/dist/css/uikit.min.css" />
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.23/css/dataTables.uikit.min.css">
     <link rel="stylesheet" href="./app.css">
 
 </head>
@@ -20,15 +21,7 @@
         <div class="uk-padding">
             <h2>Friend List</h2>
             <p class="uk-text-primary">Update 20210211</p>
-            <table class="uk-table uk-table-responsive uk-table-divider" id="table-friends">
-                <thead>
-                    <tr>
-                        <th class="uk-width-1-2">Name</th>
-                        <th class="uk-width-1-2">Location</th>
-                    </tr>
-                </thead>
-                <tbody>
-                </tbody>
+            <table class="uk-table uk-table-responsive uk-table-divider uk-table-striped" id="table-friends">
             </table>
         </div>
 
@@ -39,6 +32,9 @@
 <!-- UIkit JS -->
 <script src="https://cdn.jsdelivr.net/npm/uikit@3.6.16/dist/js/uikit.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/uikit@3.6.16/dist/js/uikit-icons.min.js"></script>
+
+<script src="https://cdn.datatables.net/1.10.23/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.10.23/js/dataTables.uikit.min.js"></script>
 
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6"></script>
 <script>
@@ -54,16 +50,15 @@
 <script>
 jQuery(function($) {
 
-        for (let friend of db.friends) {
-
-            let row = `
-                <tr>
-                    <td>${friend.name}</td>
-                    <td class="uk-text-muted">${friend.location}</td>
-                </tr>
-            `
-            $('#table-friends tbody').append(row)
-        }
+    $('#table-friends').DataTable({
+        pageLength: 100,
+        lengthChange: false,
+        data: db.friends,
+        columns: [
+            { title: 'Name', data: 'name', width: '50%' },
+            { title: 'Location', data: 'location' }
+        ]
+    })
 
 });
 </script>

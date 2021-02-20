@@ -881,7 +881,7 @@ const friends = [
       "link_ig": "https://www.instagram.com/rendemantelorasin/",
       "link_twitter": "",
       "link_linkedin": "",
-      "img": "",
+      "img": "./images/profiles/sebastian.jpg",
       "summary": ""
     },
     {
@@ -1538,10 +1538,10 @@ const friends = [
       "job": "Photographer, Industrial Constractor, Macrame Artist.",
       "link_wa": "https://wa.me/+6281239581551",
       "link_fb": "",
-      "link_ig": "",
+      "link_ig": "https://www.instagram.com/harrkur/",
       "link_twitter": "",
       "link_linkedin": "",
-      "img": "",
+      "img": "./images/profiles/harrkur.jpg",
       "summary": ""
     },
     {
